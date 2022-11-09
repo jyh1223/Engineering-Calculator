@@ -6,7 +6,7 @@
 #define CRT_SECURE_NO_WARNINGS
 void calculate()
 {
-	
+
 }
 void team()
 {
@@ -17,7 +17,7 @@ void team()
 	system("cls");
 	mainmenu();
 }
-int mainmenu()
+void mainmenu()
 {
 	printf("-------------------");
 	printf("\n\n");
@@ -25,7 +25,7 @@ int mainmenu()
 	printf("**** 공학용 계산기 **** ");
 	printf("\n\n");
 	Sleep(500);
-	printf("-------------------");
+	printf("-------------------\n");
 	Sleep(500);
 	printf("1 계산기 ");
 	printf("\n");
@@ -34,33 +34,34 @@ int mainmenu()
 	printf("3 exit");
 	printf("\n\n");
 	printf("번호 입력 : ");
-	
+
 	int num1;
-	
+
 	scanf("%d", &num1);
-	
+
 	switch (num1)
 	{
-		case 1:
-			calculate();
-			system("cls");
-		case 2:
-			team();
-			system("cls");
-		case 3:
-			system("cls");
-			return 0;
-		default:
-			printf("ERROR");
-			Sleep(1000);
-			system("cls");
-			mainmenu();
+	case 1:
+		calculate();
+		system("cls");
+	case 2:
+		team();
+		system("cls");
+	case 3:
+		system("cls");
+		exit();
+	default:
+		printf("ERROR");
+		Sleep(1000);
+		system("cls");
+		mainmenu();
 	}
-	
-	
+
+
 }
 
 int main()
 {
 	mainmenu();
+	return 0;
 }
